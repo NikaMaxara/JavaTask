@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/test")
 public class TestController {
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/hello", method = RequestMethod.GET, produces = { "application/json" })
     public String hello() {
         return "Hello From Server";
     }
 
-    @RequestMapping(value = "/person", method = RequestMethod.POST, produces = {"application/json"})
+    @RequestMapping(value = "/person", method = RequestMethod.POST, produces = { "application/json" })
     public PersonInfo testPost(@RequestBody PersonInfo p) {
         p.setLastName(p.getLastName() + " from server");
         return p;

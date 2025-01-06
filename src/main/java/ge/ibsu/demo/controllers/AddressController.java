@@ -19,12 +19,12 @@ public class AddressController {
         this.addressService = addressService;
     }
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = { "application/json" })
     public List<Address> getAll() {
         return addressService.getAll();
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = { "application/json" })
     public Address getById(@PathVariable Long id) {
         return addressService.getById(id);
     }

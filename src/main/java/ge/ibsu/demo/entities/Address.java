@@ -8,11 +8,14 @@ public class Address {
     @Id
     @SequenceGenerator(name = "address_address_id_seq", sequenceName = "address_address_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "address_address_id_seq")
-    @Column(name =  "address_id")
+    @Column(name = "address_id")
     private Long id;
 
     @Column(name = "address")
     private String address;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "city_id")
+    private City city;
 
     public Long getId() {
         return id;
@@ -28,5 +31,9 @@ public class Address {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
     }
 }

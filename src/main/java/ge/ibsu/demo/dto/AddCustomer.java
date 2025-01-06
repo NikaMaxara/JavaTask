@@ -5,6 +5,7 @@ public class AddCustomer {
     private String firstName;
     private String lastName;
     private String address;
+    private String city;
 
     public String getFirstName() {
         return firstName;
@@ -12,6 +13,14 @@ public class AddCustomer {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCity() {
+        return city;
     }
 
     public String getLastName() {
